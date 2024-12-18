@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cerebra_atlas_python"
+version = "0.0.1"
+authors = [{ name = "kdotdot", email = "carlos.g.tapia@mytudublin.ie" }]
+description = "Cerebra atlas, average brain volume package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/kdotdot/cerebra_atlas_python"
+# Issues = ""
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."] # Point to the project root
+
+[tool.setuptools.package-data]
+"cerebra_atlas_python" = [
+    "data/cerebra_data/*",
+    "data/cerebra_data/FreeSurfer/subjects/icbm152/mri/*",
+    "data/cerebra_data/FreeSurfer/subjects/icbm152/mri/transforms/*",
+    "data/cerebra_data/FreeSurfer/subjects/icbm152/bem/*",
+] # Path relative to the package
