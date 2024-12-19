@@ -109,7 +109,7 @@ def create_plot(
 ):
     vis = Visualizer()
     vis.create_window(width=1024, height=1024)  # width=1080, height=1080
-    #vis.get_render_option().background_color = background_color
+    vis.get_render_option().background_color = background_color
     vis.get_render_option().point_size = 15
     vis.get_render_option().show_coordinate_frame = True
     vis.get_render_option().mesh_show_wireframe = True
